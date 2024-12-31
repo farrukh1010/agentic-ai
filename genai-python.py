@@ -14,5 +14,15 @@ prompt = PromptTemplate(
 )
 
 chain = prompt | llm
-response=chain.invoke({"characters":"Farrukh and Ahmad"})
-print(response)
+while True:
+    input_text = input("Enter your message:")
+    response = chain .invoke(input_text)
+    print(response)
+
+
+     
+
+
+
+# response=chain.invoke({"characters":"Farrukh and Ahmad"})
+# print(response)
