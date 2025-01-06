@@ -15,6 +15,7 @@ except  Exception as e:
     print("Error while loading file=", e)
 
 #  Create embeings
+
 embedding = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 #  use a smaller chunk size to manage token limits
 text_splitter= CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
